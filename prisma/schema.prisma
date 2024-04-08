@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Twitch {
+  id            Int    @id @default(autoincrement())
+  login         String
+  access_token  String @unique
+  refresh_token String @unique
+}
+
+model Nightbot {
+  id            Int    @id @default(autoincrement())
+  access_token  String @unique
+  refresh_token String @unique
+}

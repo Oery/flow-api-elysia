@@ -1,0 +1,20 @@
+{
+  "name": "flow-api-ts",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "start": "bun run src/index.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "5.12.1",
+    "elysia": "^1.0.13",
+    "prisma": "^5.12.1",
+    "qs": "^6.12.0"
+  }
+}
