@@ -10,6 +10,7 @@ const prisma = new PrismaClient();
 export default prisma;
 
 const app = new Elysia()
+    .get('/', () => 'Hello World!')
     .post('/auth/twitch/code', authTwitch, auth_body)
     .post('/auth/nightbot/code', authNightbot, auth_body)
     .post('/auth/twitch/refresh', refreshTwitch, token_body)
